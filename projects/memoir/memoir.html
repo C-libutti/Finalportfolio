@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Memoir Project — Final Portfolio</title>
+  <link id="site-css" rel="stylesheet" href="">
+  <script>
+    (function(){
+      var path = location.pathname.replace(/\\/g,'/');
+      var prefix = '';
+      if(path.indexOf('/projects/photography/')!==-1) prefix='../../';
+      else if(path.indexOf('/projects/')!==-1) prefix='../';
+      document.getElementById('site-css').href = prefix + 'assets/css/styles.css';
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" data-href="index.html">My English Portfolio</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="site-nav">
+        <ul>
+          <li><a data-href="index.html">Home</a></li>
+          <li><a data-href="about.html">About Me</a></li>
+          <li class="has-dropdown">
+            <button class="drop-btn">Projects ▾</button>
+            <ul class="dropdown">
+              <li><a data-href="projects/photography/home.html">Photography Discourse Community</a></li>
+              <li><a data-href="projects/memoir/memoir.html">Memoir</a></li>
+              <li><a data-href="project1.html">Project 1</a></li>
+              <li><a data-href="project2.html">Project 2</a></li>
+            </ul>
+          </li>
+          <li><a data-href="slos.html">SLOs</a></li>
+          <li class="has-dropdown">
+            <button class="drop-btn">Extras ▾</button>
+            <ul class="dropdown">
+              <li><a data-href="swas.html">SWA's</a></li>
+              <li><a data-href="peer-reviewed-drafts.html">Peer Reviewed Drafts</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="project-hero">
+      <h1>Memoir</h1>
+      <p class="muted">A dedicated memoir project area. Paste your memoir artifacts and reflective writing here.</p>
+    </article>
+
+    <section class="container narrow">
+      <h2>Memoir Project</h2>
+      <p class="placeholder">[Paste Memoir Project artifact here]</p>
+
+      <h3>Reflection</h3>
+      <p class="placeholder">[Paste Memoir Reflection here] (or use the separate reflection page)</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; [Year] Your Name. <span class="muted">Memoir Project</span></p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var path = location.pathname.replace(/\\/g,'/');
+      var prefix = '';
+      if(path.indexOf('/projects/photography/')!==-1) prefix='../../';
+      else if(path.indexOf('/projects/')!==-1) prefix='../';
+
+      document.querySelectorAll('[data-href]').forEach(function(el){
+        var href = el.getAttribute('data-href');
+        if(href){ el.setAttribute('href', prefix + href); }
+      });
+
+      var s = document.createElement('script'); s.src = prefix + 'assets/js/main.js'; document.body.appendChild(s);
+    })();
+  </script>
+</body>
+</html>

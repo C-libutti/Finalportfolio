@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Final Portfolio — Home</title>
+  <link id="site-css" rel="stylesheet" href="">
+  <script>
+    (function(){
+      var path = location.pathname.replace(/\\/g,'/');
+      var prefix = '';
+      if(path.indexOf('/projects/photography/')!==-1) prefix='../../';
+      else if(path.indexOf('/projects/')!==-1) prefix='../';
+      document.getElementById('site-css').href = prefix + 'assets/css/styles.css';
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" data-href="index.html">My English Portfolio</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="site-nav">
+        <ul>
+          <li><a data-href="index.html">Home</a></li>
+          <li><a data-href="about.html">About Me</a></li>
+          <li class="has-dropdown">
+            <button class="drop-btn">Projects ▾</button>
+            <ul class="dropdown">
+              <li><a data-href="projects/photography/home.html">Photography Discourse Community</a></li>
+              <li><a data-href="projects/memoir/memoir.html">Memoir</a></li>
+              <li><a data-href="project1.html">Project 1</a></li>
+              <li><a data-href="project2.html">Project 2</a></li>
+            </ul>
+          </li>
+          <li><a data-href="slos.html">SLOs</a></li>
+          <li class="has-dropdown">
+            <button class="drop-btn">Extras ▾</button>
+            <ul class="dropdown">
+              <li><a data-href="swas.html">SWA's</a></li>
+              <li><a data-href="peer-reviewed-drafts.html">Peer Reviewed Drafts</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Final Portfolio</h1>
+      <p class="lede">A clean, academic portfolio ready for your essays, projects, and reflections.</p>
+      <p class="muted">Use the Projects menu to open the Photography Discourse Community, Memoir, and other artifacts.</p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h3>About Me</h3>
+        <p>[Paste About Me here]</p>
+        <a class="btn" data-href="about.html">Open</a>
+      </article>
+
+      <article class="card">
+        <h3>Photography Discourse Community</h3>
+        <p>[Photography project structure]</p>
+        <a class="btn" data-href="projects/photography/home.html">Open Project</a>
+      </article>
+
+      <article class="card">
+        <h3>Memoir</h3>
+        <p>[Memoir project overview]</p>
+        <a class="btn" data-href="projects/memoir/memoir.html">Open Memoir</a>
+      </article>
+
+      <article class="card">
+        <h3>SLOs & Reflection</h3>
+        <p>[Paste SLO reflections here]</p>
+        <a class="btn" data-href="slos.html">Open</a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; [Year] Your Name. <span class="muted">Final Portfolio — ENGL 1110</span></p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var path = location.pathname.replace(/\\/g,'/');
+      var prefix = '';
+      if(path.indexOf('/projects/photography/')!==-1) prefix='../../';
+      else if(path.indexOf('/projects/')!==-1) prefix='../';
+
+      // set data-href links
+      document.querySelectorAll('[data-href]').forEach(function(el){
+        var href = el.getAttribute('data-href');
+        if(href){
+          el.setAttribute('href', prefix + href);
+        }
+      });
+
+      // load main.js
+      var s = document.createElement('script');
+      s.src = prefix + 'assets/js/main.js';
+      document.body.appendChild(s);
+    })();
+  </script>
+</body>
+</html>

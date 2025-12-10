@@ -8,26 +8,32 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" data-href="index.html">My English Portfolio</a>
-      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-      <nav class="site-nav">
-        <ul>
-          <li><a data-href="index.html">Home</a></li>
-          <li><a data-href="about.html">About Me</a></li>
-          <li class="has-dropdown">
-            <button class="drop-btn" aria-haspopup="menu" aria-expanded="false">Projects ▾</button>
-            <ul class="dropdown-menu">
-              <li><a data-href="project1.html">Project 1 (Memoir)</a></li>
-              <li><a data-href="project2.html">Project 2 (Photography)</a></li>
-            </ul>
-          </li>
-          <li><a data-href="slos.html">SLOs</a></li>
-          <!-- Extras merged into Projects dropdown to simplify navigation -->
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <div class="container header-inner">
+    <a class="brand" href="/">My English Portfolio</a>
+    <button class="nav-toggle" aria-label="Toggle navigation">Menu</button>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About Me</a></li>
+        <li class="has-dropdown">
+          <button class="drop-btn" aria-haspopup="menu" aria-expanded="false">Projects v</button>
+          <ul class="dropdown-menu">
+            <li><a href="/project1.html">Project 1 (Memoir)</a></li>
+            <li><a href="/projects/project2-photography/index.html">Project 2 (Photography)</a></li>
+          </ul>
+        </li>
+        <li><a href="/slos.html">SLOs</a></li>
+        <li class="has-dropdown">
+          <button class="drop-btn" aria-haspopup="menu" aria-expanded="false">Extra Credit v</button>
+          <ul class="dropdown-menu">
+            <li><a href="/creative-revision.html">Creative Revision</a></li>
+            <li><a href="/swas.html">SWAs</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
   <main class="container">
     <article class="project-hero">
@@ -77,3 +83,5 @@
   </script>
 </body>
 </html>
+
+

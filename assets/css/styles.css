@@ -682,11 +682,14 @@ figcaption {
   flex:1;
   min-width:150px;
   padding:0;
+  display:flex;
 }
 
 .photography-nav li a,
 .photography-nav li strong{
-  display:block;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   padding:14px 12px;
   text-align:center;
   text-decoration:none;

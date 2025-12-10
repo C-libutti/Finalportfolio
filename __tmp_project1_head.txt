@@ -31,12 +31,10 @@
 
   <main class="container narrow">
     <article>
-      <div class="content-panel">
-        <h1>Project 1 — Memoir</h1>
-        <p>This is my memoir project, a deeply personal narrative exploring a pivotal moment in my childhood that shaped who I am today. The project includes my written artifact, reflection on the writing process, and Student Learning Outcomes analysis.</p>
-        
-        <a href="projects/memoir/memoir.html" class="btn">View Full Memoir Project -></a>
-      </div>
+      <h1>Project 1 — Memoir</h1>
+      <p>This is my memoir project, a deeply personal narrative exploring a pivotal moment in my childhood that shaped who I am today. The project includes my written artifact, reflection on the writing process, and Student Learning Outcomes analysis.</p>
+      
+      <a href="projects/memoir/memoir.html" class="btn">View Full Memoir Project →</a>
     </article>
   </main>
 

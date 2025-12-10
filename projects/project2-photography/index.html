@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Photography: Capturing Life Through Light — Home</title>
+  <link id="site-css" rel="stylesheet" href="">
+  <script>
+    (function(){
+      var path = location.pathname.replace(/\\/g,'/');
+      var prefix = '';
+      if(path.indexOf('/projects/project2-photography/')!==-1) prefix='../../';
+      else if(path.indexOf('/projects/')!==-1) prefix='../';
+      document.getElementById('site-css').href = prefix + 'assets/css/styles.css';
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" data-href="index.html">My English Portfolio</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="site-nav">
+        <ul>
+          <li><a data-href="index.html">Home</a></li>
+          <li><a data-href="about.html">About Me</a></li>
+          <li class="has-dropdown">
+            <button class="drop-btn" aria-haspopup="menu" aria-expanded="false">Projects ▾</button>
+            <ul class="dropdown-menu">
+              <li><a data-href="project1.html">Project 1 (Memoir)</a></li>
+              <li><a data-href="projects/project2-photography/index.html">Project 2 (Photography)</a></li>
+            </ul>
+          </li>
+          <li><a data-href="slos.html">SLOs</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="photography-article">
+      <!-- Photography Internal Navigation -->
+      <nav class="photography-nav">
+        <ul>
+          <li><strong>Home</strong></li>
+          <li><a href="why-photography-matters.html">Why Photography Matters</a></li>
+          <li><a href="community-values.html">Community Values</a></li>
+          <li><a href="language-community.html">Language of the Community</a></li>
+          <li><a href="finding-inspiration.html">Finding Inspiration</a></li>
+          <li><a href="slos-reflection.html">SLO's / Reflection</a></li>
+        </ul>
+      </nav>
+
+      <section class="photography-hero">
+        <h1>Photography: Capturing Life Through Light</h1>
+        <figure class="photography-image">
+          <img src="../../assets/images/photography/home-hero.jpg" alt="Photography: Capturing Life Through Light">
+          <figcaption>A moment captured through the lens</figcaption>
+        </figure>
+      </section>
+
+      <section class="photography-content">
+        <h2>What is Photography?</h2>
+        
+        <p>I became involved in the photography community when I borrowed my friend's camera during high school. What started as a way to document everyday life quickly became a passion for storytelling through images. The first time I adjusted the settings for myself on manual mode, I realized how much control I had over how a moment could feel. Photography felt like a voice without words, allowing me to express emotion through lighting, texture, and composition.</p>
+
+        <p>Photography is important to me because it teaches patience and attention to detail. Each photo is a lesson in seeing the world differently, finding beauty in simple things like reflections on glass or shadows on pavement. Sharing my photos with my group of photography friends and receiving feedback has helped me grow technically and creatively. This community inspires constant learning, whether it's mastering post-processing/color grading in Lightroom or experimenting with the rule of thirds to improve composition.</p>
+
+        <p>To outsiders, the photography discourse community may seem technical, full of difficult concepts like "exposure triangle" or "depth of field," but at its heart, it's about connection. Photographers use visual language to communicate emotions, preserve memories, and spark empathy. We share tips in forums, collaborate on shoots, and critique each other's work to refine our craft.</p>
+
+        <p>Our community values creativity, authenticity, and storytelling. Whether it's a street photographer capturing spontaneous city life or a portrait artist shaping light to reveal character, every image reflects our shared mission: to see the extraordinary in the ordinary.</p>
+      </section>
+
+      <!-- Bottom Navigation -->
+      <nav class="photography-bottom-nav">
+        <a href="why-photography-matters.html" class="nav-btn">Why Photography Matters →</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Your Name. <span class="muted">Final Portfolio — ENGL 1110</span></p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var path = location.pathname.replace(/\\/g,'/');
+      var prefix = '';
+      if(path.indexOf('/projects/project2-photography/')!==-1) prefix='../../';
+      else if(path.indexOf('/projects/')!==-1) prefix='../';
+
+      // set data-href links
+      document.querySelectorAll('[data-href]').forEach(function(el){
+        var href = el.getAttribute('data-href');
+        if(href){
+          el.setAttribute('href', prefix + href);
+        }
+      });
+
+      // load main.js
+      var s = document.createElement('script');
+      s.src = prefix + 'assets/js/main.js';
+      document.body.appendChild(s);
+    })();
+  </script>
+</body>
+</html>

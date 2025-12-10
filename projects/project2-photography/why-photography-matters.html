@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Why Photography Matters — Photography Discourse</title>
+  <link id="site-css" rel="stylesheet" href="">
+  <script>
+    (function(){
+      var path = location.pathname.replace(/\\/g,'/');
+      var prefix = '';
+      if(path.indexOf('/projects/project2-photography/')!==-1) prefix='../../';
+      else if(path.indexOf('/projects/')!==-1) prefix='../';
+      document.getElementById('site-css').href = prefix + 'assets/css/styles.css';
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" data-href="index.html">My English Portfolio</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="site-nav">
+        <ul>
+          <li><a data-href="index.html">Home</a></li>
+          <li><a data-href="about.html">About Me</a></li>
+          <li class="has-dropdown">
+            <button class="drop-btn" aria-haspopup="menu" aria-expanded="false">Projects ▾</button>
+            <ul class="dropdown-menu">
+              <li><a data-href="project1.html">Project 1 (Memoir)</a></li>
+              <li><a data-href="projects/project2-photography/index.html">Project 2 (Photography)</a></li>
+            </ul>
+          </li>
+          <li><a data-href="slos.html">SLOs</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="photography-article">
+      <!-- Photography Internal Navigation -->
+      <nav class="photography-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><strong>Why Photography Matters</strong></li>
+          <li><a href="community-values.html">Community Values</a></li>
+          <li><a href="language-community.html">Language of the Community</a></li>
+          <li><a href="finding-inspiration.html">Finding Inspiration</a></li>
+          <li><a href="slos-reflection.html">SLO's / Reflection</a></li>
+        </ul>
+      </nav>
+
+      <section class="photography-hero">
+        <h1>Why does it matter?</h1>
+        <figure class="photography-image">
+          <img src="../../assets/images/photography/why-photography-matters-artist.jpg" alt="Why Photography Matters">
+          <figcaption>Photography as personal expression</figcaption>
+        </figure>
+      </section>
+
+      <section class="photography-content">
+        <p>Photography matters to me because it allows me to capture the world the way I see it and express moments that words can't describe. I enjoy experimenting with lighting, angles, and techniques to create images that feel meaningful and personal. Learning about photography's vocabulary and values helped me understand how much skill and creativity go into every shot. Being part of this community has shown me how supportive and inspiring other photographers can be, whether they're sharing tips or giving feedback. Photography has become a way for me to explore my interests, challenge myself creatively, and connect with something bigger than just taking pictures.</p>
+      </section>
+
+      <!-- Bottom Navigation -->
+      <nav class="photography-bottom-nav">
+        <a href="index.html" class="nav-btn">← Home</a>
+        <a href="community-values.html" class="nav-btn">Community Values →</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Your Name. <span class="muted">Final Portfolio — ENGL 1110</span></p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var path = location.pathname.replace(/\\/g,'/');
+      var prefix = '';
+      if(path.indexOf('/projects/project2-photography/')!==-1) prefix='../../';
+      else if(path.indexOf('/projects/')!==-1) prefix='../';
+
+      // set data-href links
+      document.querySelectorAll('[data-href]').forEach(function(el){
+        var href = el.getAttribute('data-href');
+        if(href){
+          el.setAttribute('href', prefix + href);
+        }
+      });
+
+      // load main.js
+      var s = document.createElement('script');
+      s.src = prefix + 'assets/js/main.js';
+      document.body.appendChild(s);
+    })();
+  </script>
+</body>
+</html>

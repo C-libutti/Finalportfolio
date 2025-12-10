@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SLO's / Reflection — Photography Discourse</title>
+  <link id="site-css" rel="stylesheet" href="">
+  <script>
+    (function(){
+      var path = location.pathname.replace(/\\/g,'/');
+      var prefix = '';
+      if(path.indexOf('/projects/project2-photography/')!==-1) prefix='../../';
+      else if(path.indexOf('/projects/')!==-1) prefix='../';
+      document.getElementById('site-css').href = prefix + 'assets/css/styles.css';
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" data-href="index.html">My English Portfolio</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="site-nav">
+        <ul>
+          <li><a data-href="index.html">Home</a></li>
+          <li><a data-href="about.html">About Me</a></li>
+          <li class="has-dropdown">
+            <button class="drop-btn" aria-haspopup="menu" aria-expanded="false">Projects ▾</button>
+            <ul class="dropdown-menu">
+              <li><a data-href="project1.html">Project 1 (Memoir)</a></li>
+              <li><a data-href="projects/project2-photography/index.html">Project 2 (Photography)</a></li>
+            </ul>
+          </li>
+          <li><a data-href="slos.html">SLOs</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="photography-article">
+      <!-- Photography Internal Navigation -->
+      <nav class="photography-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="why-photography-matters.html">Why Photography Matters</a></li>
+          <li><a href="community-values.html">Community Values</a></li>
+          <li><a href="language-community.html">Language of the Community</a></li>
+          <li><a href="finding-inspiration.html">Finding Inspiration</a></li>
+          <li><strong>SLO's / Reflection</strong></li>
+        </ul>
+      </nav>
+
+      <section class="photography-hero">
+        <h1>SLO's / Reflection</h1>
+      </section>
+
+      <section class="photography-content">
+        <h2>Student Learning Outcomes</h2>
+        
+        <div class="slo-box">
+          <h3>SLO 1: Written Communication</h3>
+          <p><strong>Outcome:</strong> Analyze and compose writing that effectively conveys ideas to academic audiences.</p>
+          <p><strong>Reflection:</strong> Through this project, I learned to write clearly about complex photography concepts while maintaining academic voice. I analyzed primary sources (Berger, Bodurka) and synthesized their ideas to explain photography's cultural significance. Writing definitions for photography terminology helped me practice precision and clarity—essential for academic audiences.</p>
+        </div>
+
+        <div class="slo-box">
+          <h3>SLO 2: Critical Analysis</h3>
+          <p><strong>Outcome:</strong> Examine and interpret texts, ideas, and information to develop informed perspectives.</p>
+          <p><strong>Reflection:</strong> I critically analyzed how photography functions as visual language within a community. By examining community values (creativity, storytelling, technical skill), I developed a deeper understanding of how photographers communicate meaning beyond words. The research on sources like National Geographic and academic journals helped me recognize different forms of photographic discourse.</p>
+        </div>
+
+        <div class="slo-box">
+          <h3>SLO 3: Engagement with Communities of Practice</h3>
+          <p><strong>Outcome:</strong> Understand how ideas are created, shared, and refined within professional communities.</p>
+          <p><strong>Reflection:</strong> This project taught me how photography communities operate—through feedback, collaboration, and shared technical language. I learned that being part of a discourse community means not just producing work, but actively engaging with others' ideas, asking critical questions, and contributing to collective learning. The photography community exemplifies how professionals build shared knowledge.</p>
+        </div>
+
+        <h2>Key Takeaways</h2>
+        <ul>
+          <li>Photography is both art and technical skill—community discourse balances both dimensions</li>
+          <li>Terminology matters; shared language allows communities to communicate complexity precisely</li>
+          <li>Communities thrive on collaboration, feedback, and mutual support—not competition</li>
+          <li>Academic sources and social media play different but equally important roles in professional communities</li>
+          <li>Analyzing a real community taught me more about writing and communication than any abstract lesson could</li>
+        </ul>
+      </section>
+
+      <!-- Bottom Navigation -->
+      <nav class="photography-bottom-nav">
+        <a href="finding-inspiration.html" class="nav-btn">← Finding Inspiration</a>
+        <a href="index.html" class="nav-btn">Home →</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Your Name. <span class="muted">Final Portfolio — ENGL 1110</span></p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var path = location.pathname.replace(/\\/g,'/');
+      var prefix = '';
+      if(path.indexOf('/projects/project2-photography/')!==-1) prefix='../../';
+      else if(path.indexOf('/projects/')!==-1) prefix='../';
+
+      // set data-href links
+      document.querySelectorAll('[data-href]').forEach(function(el){
+        var href = el.getAttribute('data-href');
+        if(href){
+          el.setAttribute('href', prefix + href);
+        }
+      });
+
+      // load main.js
+      var s = document.createElement('script');
+      s.src = prefix + 'assets/js/main.js';
+      document.body.appendChild(s);
+    })();
+  </script>
+</body>
+</html>

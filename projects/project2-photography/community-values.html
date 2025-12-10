@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Community Values — Photography Discourse</title>
+  <link id="site-css" rel="stylesheet" href="">
+  <script>
+    (function(){
+      var path = location.pathname.replace(/\\/g,'/');
+      var prefix = '';
+      if(path.indexOf('/projects/project2-photography/')!==-1) prefix='../../';
+      else if(path.indexOf('/projects/')!==-1) prefix='../';
+      document.getElementById('site-css').href = prefix + 'assets/css/styles.css';
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" data-href="index.html">My English Portfolio</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="site-nav">
+        <ul>
+          <li><a data-href="index.html">Home</a></li>
+          <li><a data-href="about.html">About Me</a></li>
+          <li class="has-dropdown">
+            <button class="drop-btn" aria-haspopup="menu" aria-expanded="false">Projects ▾</button>
+            <ul class="dropdown-menu">
+              <li><a data-href="project1.html">Project 1 (Memoir)</a></li>
+              <li><a data-href="projects/project2-photography/index.html">Project 2 (Photography)</a></li>
+            </ul>
+          </li>
+          <li><a data-href="slos.html">SLOs</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="photography-article">
+      <!-- Photography Internal Navigation -->
+      <nav class="photography-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="why-photography-matters.html">Why Photography Matters</a></li>
+          <li><strong>Community Values</strong></li>
+          <li><a href="language-community.html">Language of the Community</a></li>
+          <li><a href="finding-inspiration.html">Finding Inspiration</a></li>
+          <li><a href="slos-reflection.html">SLO's / Reflection</a></li>
+        </ul>
+      </nav>
+
+      <section class="photography-hero">
+        <h1>Community Values in Photography</h1>
+        <figure class="photography-image">
+          <img src="../../assets/images/photography/community-values-collaboration.jpg" alt="Community Values in Photography">
+          <figcaption>Photographers collaborating and sharing feedback</figcaption>
+        </figure>
+      </section>
+
+      <section class="photography-content">
+        <p>Photography is built on a set of shared values that guide the community.</p>
+
+        <dl class="values-list">
+          <dt>Creativity</dt>
+          <dd>Creativity is at the core, as every photographer develops their own style and visual voice.</dd>
+
+          <dt>Storytelling</dt>
+          <dd>Storytelling allows photographers to capture emotion, meaning, and perspective through a single image.</dd>
+
+          <dt>Technical Skill</dt>
+          <dd>Technical Skill is essential for controlling light, composition, and camera settings, and photographers spend years mastering these tools.</dd>
+
+          <dt>Patience</dt>
+          <dd>Patience is a major value, especially in nature, wildlife, and street photography, where the perfect moment can take time to appear.</dd>
+
+          <dt>Collaboration and Feedback</dt>
+          <dd>Collaboration and Feedback strengthen the community; photographers constantly share tips, critique each other's work, and learn from different styles. These values shape how photographers grow and support each other.</dd>
+        </dl>
+      </section>
+
+      <!-- Bottom Navigation -->
+      <nav class="photography-bottom-nav">
+        <a href="why-photography-matters.html" class="nav-btn">← Why Photography Matters</a>
+        <a href="language-community.html" class="nav-btn">Language of the Community →</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Your Name. <span class="muted">Final Portfolio — ENGL 1110</span></p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var path = location.pathname.replace(/\\/g,'/');
+      var prefix = '';
+      if(path.indexOf('/projects/project2-photography/')!==-1) prefix='../../';
+      else if(path.indexOf('/projects/')!==-1) prefix='../';
+
+      // set data-href links
+      document.querySelectorAll('[data-href]').forEach(function(el){
+        var href = el.getAttribute('data-href');
+        if(href){
+          el.setAttribute('href', prefix + href);
+        }
+      });
+
+      // load main.js
+      var s = document.createElement('script');
+      s.src = prefix + 'assets/js/main.js';
+      document.body.appendChild(s);
+    })();
+  </script>
+</body>
+</html>

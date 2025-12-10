@@ -368,6 +368,7 @@ body{
   margin:0;
   color:var(--text-muted);
 }
+.page-hero .btn{margin-top:var(--space-3);}
 
 /* Thin Divider */
 .divider{

@@ -9,20 +9,20 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" data-href="index.html">My English Portfolio</a>
+      <a class="brand" href="/">My English Portfolio</a>
       <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
       <nav class="site-nav">
         <ul>
-          <li><a data-href="index.html">Home</a></li>
-          <li><a data-href="about.html">About Me</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html">About Me</a></li>
           <li class="has-dropdown">
-            <button class="drop-btn" aria-haspopup="menu" aria-expanded="false">Projects ▾</button>
-            <ul class="dropdown-menu">
-              <li><a data-href="project1.html">Project 1 (Memoir)</a></li>
-              <li><a data-href="projects/project2-photography/index.html">Project 2 (Photography)</a></li>
+            <button class="drop-btn" id="projects-trigger" aria-haspopup="menu" aria-expanded="false">Projects ▾</button>
+            <ul class="dropdown-menu" id="projects-menu">
+              <li><a href="/project1.html">Project 1 (Memoir)</a></li>
+              <li><a href="/projects/project2-photography/index.html">Project 2 (Photography)</a></li>
             </ul>
           </li>
-          <li><a data-href="slos.html">SLOs</a></li>
+          <li><a href="/slos.html">SLOs</a></li>
         </ul>
       </nav>
     </div>
@@ -32,52 +32,54 @@
     <article class="memoir-article">
       <h1>Memoir</h1>
 
-      <section class="memoir-section">
-        <figure class="memoir-image">
-          <img src="../../assets/images/memoir/detective.jpg" alt="A detective in shadows">
-          <figcaption>A moment from the past</figcaption>
-        </figure>
+      <div class="reading-panel">
+        <section class="memoir-section">
+          <figure class="memoir-image">
+            <img src="../../assets/images/memoir/detective.jpg" alt="A detective in shadows">
+            <figcaption>A moment from the past</figcaption>
+          </figure>
 
-        <p>You would think you could trust your own grandpa, right? Wrong. When I was five, I thought time with my grandfather was just an adventure. He was the kind of man who carried himself with authority, his voice steady but edged with mystery. We would take long drives at night, the kind where the streetlights stretched out like golden beads across the dark highway. I never asked where we were going. I only knew I was with him, and that I felt safe. What I did not know then was that these were not harmless errands. They were runs, quiet exchanges in parking lots or back alleys, and though I did not understand it, he was moving with the shadowy rhythm of the mob.</p>
-      </section>
+          <p>You would think you could trust your own grandpa, right? Wrong. When I was five, I thought time with my grandfather was just an adventure. He was the kind of man who carried himself with authority, his voice steady but edged with mystery. We would take long drives at night, the kind where the streetlights stretched out like golden beads across the dark highway. I never asked where we were going. I only knew I was with him, and that I felt safe. What I did not know then was that these were not harmless errands. They were runs, quiet exchanges in parking lots or back alleys, and though I did not understand it, he was moving with the shadowy rhythm of the mob.</p>
+        </section>
 
-      <section class="memoir-section">
-        <p>One evening, he told me to wait in the car while he stepped out to meet a group of men near the edge of a dimly lit lot. I pressed my forehead to the window, tracing the fog of my breath into little shapes, trying to distract myself from the feeling that something was off. The men greeted him with nods at first, but their voices rose, words sharp and clipped. My small world tilted in a way I could not understand.</p>
+        <section class="memoir-section">
+          <p>One evening, he told me to wait in the car while he stepped out to meet a group of men near the edge of a dimly lit lot. I pressed my forehead to the window, tracing the fog of my breath into little shapes, trying to distract myself from the feeling that something was off. The men greeted him with nods at first, but their voices rose, words sharp and clipped. My small world tilted in a way I could not understand.</p>
 
-        <p>The night cracked open with the sound of gunfire. It was not like the TV shows I had sometimes snuck a glance at. It was louder, crueler, echoing inside my ribs. I dropped down instantly, curling into a ball at the foot of my seat, too scared to breathe. My fingers dug into the carpet as though the fabric could swallow me whole and protect me. Through the glass resonated with chaos, shouts cut short, followed by a silence heavy enough to crush the air from my chest. That was the night my childhood innocence was shattered.</p>
-      </section>
+          <p>The night cracked open with the sound of gunfire. It was not like the TV shows I had sometimes snuck a glance at. It was louder, crueler, echoing inside my ribs. I dropped down instantly, curling into a ball at the foot of my seat, too scared to breathe. My fingers dug into the carpet as though the fabric could swallow me whole and protect me. Through the glass resonated with chaos, shouts cut short, followed by a silence heavy enough to crush the air from my chest. That was the night my childhood innocence was shattered.</p>
+        </section>
 
-      <section class="memoir-section">
-        <figure class="memoir-image">
-          <img src="../../assets/images/memoir/police-car.webp" alt="Police car with flashing lights">
-          <figcaption>The night the world changed</figcaption>
-        </figure>
+        <section class="memoir-section">
+          <figure class="memoir-image">
+            <img src="../../assets/images/memoir/police-car.webp" alt="Police car with flashing lights">
+            <figcaption>The night the world changed</figcaption>
+          </figure>
 
-        <p>When the shots stopped, I remained hidden, pressed onto the floor as if I were trying to disappear. I remember the scent of gasoline seeping into my nose, the faint hum of the engine, the sharp sting of terror freezing my body in place. My grandfather's voice never came back to reassure me. All I could see when I dared peek up was the glow of red and blue lights flashing against the walls of the lot as police cars pulled in.</p>
+          <p>When the shots stopped, I remained hidden, pressed onto the floor as if I were trying to disappear. I remember the scent of gasoline seeping into my nose, the faint hum of the engine, the sharp sting of terror freezing my body in place. My grandfather's voice never came back to reassure me. All I could see when I dared peek up was the glow of red and blue lights flashing against the walls of the lot as police cars pulled in.</p>
 
-        <p>They found me curled in the backseat, trembling, unable to explain anything. My words came out broken, my small voice trying to tell them I had been waiting like he told me. The officers' faces shifted between pity and suspicion, their radios buzzing with static and codes I did not understand. I never saw my grandfather again.</p>
-      </section>
+          <p>They found me curled in the backseat, trembling, unable to explain anything. My words came out broken, my small voice trying to tell them I had been waiting like he told me. The officers' faces shifted between pity and suspicion, their radios buzzing with static and codes I did not understand. I never saw my grandfather again.</p>
+        </section>
 
-      <section class="memoir-section">
-        <p>The trauma sank deep. For years, I flinched at loud noises, fireworks sending me right back to that night, heart pounding, body folding in on itself. Trust became slippery, a word I could not hold onto. If someone as close as my grandfather could lead me into such darkness, how could I believe in anyone fully?</p>
+        <section class="memoir-section">
+          <p>The trauma sank deep. For years, I flinched at loud noises, fireworks sending me right back to that night, heart pounding, body folding in on itself. Trust became slippery, a word I could not hold onto. If someone as close as my grandfather could lead me into such darkness, how could I believe in anyone fully?</p>
 
-        <p>And yet, the memory taught me something too. I learned early that choices ripple outward. His choices brought him power but also danger, and they pulled me, innocent, into the crossfire. As I grew older, that lesson stayed sharp in my mind. I understood how fragile life was, how quickly one wrong move could burn everything down.</p>
+          <p>And yet, the memory taught me something too. I learned early that choices ripple outward. His choices brought him power but also danger, and they pulled me, innocent, into the crossfire. As I grew older, that lesson stayed sharp in my mind. I understood how fragile life was, how quickly one wrong move could burn everything down.</p>
 
-        <p>The image of him standing there, talking with those men, and then collapsing under the weight of violence never left me. It was both a scar and a compass, pointing me toward a life where I would never repeat his mistakes.</p>
-      </section>
+          <p>The image of him standing there, talking with those men, and then collapsing under the weight of violence never left me. It was both a scar and a compass, pointing me toward a life where I would never repeat his mistakes.</p>
+        </section>
 
-      <section class="memoir-section">
-        <figure class="memoir-image">
-          <img src="../../assets/images/memoir/rain.jpg" alt="Rain and reflection">
-          <figcaption>Finding peace in the storm</figcaption>
-        </figure>
+        <section class="memoir-section">
+          <figure class="memoir-image">
+            <img src="../../assets/images/memoir/rain.jpg" alt="Rain and reflection">
+            <figcaption>Finding peace in the storm</figcaption>
+          </figure>
 
-        <p>That night changed me. It left me with nightmares, with a knot of fear that lived in my chest for years. But it also gave me a strange kind of strength. I could have let it drag me into bitterness, into the same shadows he walked in, but I chose differently.</p>
+          <p>That night changed me. It left me with nightmares, with a knot of fear that lived in my chest for years. But it also gave me a strange kind of strength. I could have let it drag me into bitterness, into the same shadows he walked in, but I chose differently.</p>
 
-        <p>I use that memory like a warning. I remind myself that I do not want to live with secrets, lies, or violence circling me. I want to build trust, even if it is hard for me, and I want to make choices that keep people safe instead of putting them in danger.</p>
+          <p>I use that memory like a warning. I remind myself that I do not want to live with secrets, lies, or violence circling me. I want to build trust, even if it is hard for me, and I want to make choices that keep people safe instead of putting them in danger.</p>
 
-        <p>I can still see the flashing lights, still hear the ringing in my ears from the gunfire. I can still feel the smallness of my body curled up in that car. But now, when I remember, I let it guide me. Trauma does not have to chain me; it can teach me.</p>
-      </section>
+          <p>I can still see the flashing lights, still hear the ringing in my ears from the gunfire. I can still feel the smallness of my body curled up in that car. But now, when I remember, I let it guide me. Trauma does not have to chain me; it can teach me.</p>
+        </section>
+      </div>
 
       <h2>Reflection</h2>
 
@@ -121,20 +123,6 @@
     </div>
   </footer>
 
-  <script>
-    (function(){
-      var path = location.pathname.replace(/\\/g,'/');
-      var prefix = '';
-      if(path.indexOf('/projects/photography/')!==-1) prefix='../../';
-      else if(path.indexOf('/projects/')!==-1) prefix='../';
-
-      document.querySelectorAll('[data-href]').forEach(function(el){
-        var href = el.getAttribute('data-href');
-        if(href){ el.setAttribute('href', prefix + href); }
-      });
-
-      var s = document.createElement('script'); s.src = prefix + 'assets/js/main.js'; document.body.appendChild(s);
-    })();
-  </script>
+  <script src=\"../../assets/js/main.js\"></script>
 </body>
 </html>

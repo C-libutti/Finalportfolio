@@ -1046,6 +1046,40 @@ figcaption {
   margin-top:12px;
 }
 
+/* Reading Panel - Memoir Readability Enhancement */
+.reading-panel,
+.content-panel {
+  background-color:var(--card-bg);
+  padding:32px;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow-sm);
+  max-width:800px;
+  margin:0 auto 32px;
+  line-height:1.8;
+}
+
+.reading-panel p,
+.content-panel p {
+  margin:16px 0;
+  color:var(--text-primary);
+  font-size:1.05rem;
+  line-height:1.8;
+}
+
+.reading-panel h2,
+.reading-panel h3,
+.content-panel h2,
+.content-panel h3 {
+  color:var(--accent-green-dark);
+  margin-top:24px;
+  margin-bottom:12px;
+}
+
+.reading-panel h2:first-child,
+.content-panel h2:first-child {
+  margin-top:0;
+}
+
 .resource-links {
   list-style:none;
   padding:0;

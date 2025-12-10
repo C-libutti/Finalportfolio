@@ -1,27 +1,11 @@
 document.addEventListener('DOMContentLoaded', function(){
-  // main.js — handles nav link rewriting and interactivity
-  function computePrefix(){
-    var path = location.pathname.replace(/\\/g,'/');
-    var prefix = '';
-    if(path.indexOf('/projects/photography/')!==-1) prefix='../../';
-    else if(path.indexOf('/projects/')!==-1) prefix='../';
-    return prefix;
-  }
-
-  var prefix = computePrefix();
-
-  // rewrite links with data-href
-  document.querySelectorAll('[data-href]').forEach(function(el){
-    var href = el.getAttribute('data-href');
-    if(!href) return;
-    el.setAttribute('href', prefix + href);
-  });
-
+  // main.js — handles dropdown and navigation interactivity
+  
   // active link highlight
   (function highlight(){
     try{
       var current = location.pathname.split('/').pop();
-      if(!current) current = 'index.html';
+      if(!current || current === '') current = 'index.html';
       document.querySelectorAll('a[href]').forEach(function(a){
         var href = a.getAttribute('href');
         if(!href) return;

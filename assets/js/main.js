@@ -76,10 +76,33 @@
     });
   });
 
+  // close dropdowns on Escape key
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){
+      document.querySelectorAll('.has-dropdown').forEach(function(el){
+        el.classList.remove('drop-open');
+        var b = el.querySelector('.drop-btn');
+        if(b) b.setAttribute('aria-expanded','false');
+      });
+    }
+  });
+
+  // close dropdown when a menu item is clicked
+  document.querySelectorAll('.dropdown a').forEach(function(link){
+    link.addEventListener('click', function(){
+      var dropdown = link.closest('.has-dropdown');
+      if(dropdown){
+        dropdown.classList.remove('drop-open');
+        var btn = dropdown.querySelector('.drop-btn');
+        if(btn) btn.setAttribute('aria-expanded','false');
+      }
+    });
+  });
+
   // enhance buttons that were anchors with no default href
   document.querySelectorAll('a').forEach(function(a){
     if(a.getAttribute('href') && a.getAttribute('href').indexOf('http')===-1){
       // local link — no-op
     }
   });
-})();
+});

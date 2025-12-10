@@ -25,22 +25,19 @@
           <li><a data-href="index.html">Home</a></li>
           <li><a data-href="about.html">About Me</a></li>
           <li class="has-dropdown">
-            <button class="drop-btn">Projects ▾</button>
+            <button class="drop-btn" aria-haspopup="true" aria-expanded="false">Projects ▾</button>
             <ul class="dropdown">
               <li><a data-href="projects/photography/home.html">Photography Discourse Community</a></li>
               <li><a data-href="projects/memoir/memoir.html">Memoir</a></li>
               <li><a data-href="project1.html">Project 1</a></li>
               <li><a data-href="project2.html">Project 2</a></li>
-            </ul>
-          </li>
-          <li><a data-href="slos.html">SLOs</a></li>
-          <li class="has-dropdown">
-            <button class="drop-btn">Extras ▾</button>
-            <ul class="dropdown">
+              <li class="divider" aria-hidden="true"></li>
               <li><a data-href="swas.html">SWA's</a></li>
               <li><a data-href="peer-reviewed-drafts.html">Peer Reviewed Drafts</a></li>
             </ul>
           </li>
+          <li><a data-href="slos.html">SLOs</a></li>
+          <!-- Extras merged into Projects dropdown to simplify navigation -->
         </ul>
       </nav>
     </div>

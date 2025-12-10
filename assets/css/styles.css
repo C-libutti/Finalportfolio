@@ -103,6 +103,11 @@ body{
   cursor:pointer;
   transition:all 0.2s ease;
 }
+.drop-btn::after{
+  content:"▾";
+  font-size:0.85em;
+  line-height:1;
+}
 .drop-btn:hover{
   background-color:rgba(255,255,255,0.15);
   color:#fff;

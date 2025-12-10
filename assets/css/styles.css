@@ -181,20 +181,14 @@ body{
 .hero{
   position:relative;
   padding:var(--space-6) var(--space-4);
-  background:
-    radial-gradient(circle at 25% 35%,rgba(255,255,255,0.07) 0,rgba(255,255,255,0) 38%),
-    linear-gradient(120deg, rgba(17,20,22,0.95) 0%, rgba(17,20,22,0.9) 45%, rgba(15,76,58,0.32) 75%, rgba(15,76,58,0.42) 100%);
+  background:linear-gradient(120deg, rgba(17,20,22,0.96) 0%, rgba(17,20,22,0.9) 45%, rgba(15,76,58,0.35) 100%);
   border-radius:24px;
   margin:var(--space-4) 0;
   overflow:hidden;
   box-shadow:var(--shadow-lg);
 }
 .hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:radial-gradient(circle at 75% 50%, rgba(15,76,58,0.18), rgba(15,76,58,0) 60%);
-  pointer-events:none;
+  content:none;
 }
 .hero::after{
   content:"";

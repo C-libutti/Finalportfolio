@@ -3,7 +3,7 @@
   --bg-primary:#3f5845;
   --bg-secondary:#f5f3f0;
   --text-primary:#1a1a1a;
-  --text-muted:#4a4a4a;
+  --text-muted:#000;
   --accent-green:#2d4a34;
   --accent-green-light:#5a7f6c;
   --accent-green-dark:#1f3726;
@@ -262,12 +262,7 @@ body{
 
 /* Footer */
 .site-footer{
-  padding:40px 20px;
-  margin-top:48px;
-  border-top:1px solid var(--border-color);
-  color:var(--text-muted);
-  font-size:0.9rem;
-  text-align:center;
+  display:none;
 }
 
 /* Project Navigation */

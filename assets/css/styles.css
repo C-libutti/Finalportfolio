@@ -616,6 +616,7 @@ body{
   background-color:var(--card-bg);
   border:1px solid var(--border-color);
   border-radius:var(--radius);
+  box-shadow:var(--shadow-sm);
 }
 
 .project2-content {
@@ -624,6 +625,7 @@ body{
   background-color:var(--card-bg);
   border:1px solid var(--border-color);
   border-radius:var(--radius);
+  box-shadow:var(--shadow-sm);
 }
 
 .project2-reflection {
@@ -636,20 +638,20 @@ body{
 
 .project2-content h2,
 .project2-hero h2 {
-  color:var(--accent);
+  color:var(--text-primary);
   margin-top:0;
   font-size:1.5rem;
 }
 
 .project2-content h3,
 .project2-hero h3 {
-  color:var(--accent);
+  color:var(--text-primary);
   margin-top:24px;
   font-weight:600;
 }
 
 .project2-content h4 {
-  color:var(--accent);
+  color:var(--text-primary);
   margin-top:20px;
   font-weight:600;
   font-size:1rem;
@@ -1335,6 +1337,4 @@ figcaption {
 .memoir-article h3{color:#f5f5f5;}
 .memoir-article p,
 .memoir-article li{color:#dfe3e6;}
-
-
 

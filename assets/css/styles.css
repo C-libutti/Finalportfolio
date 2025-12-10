@@ -250,15 +250,25 @@ body{
   margin:var(--space-4) 0;
 }
 .card{
-  background-color:var(--panel);
+  background:linear-gradient(135deg,#d5d8d6 0%,#f0efeb 65%,#e7eae7 100%);
   padding:var(--space-3);
   border-radius:var(--radius);
-  border:1px solid var(--border-color);
+  border:1px solid #d6d1c7;
   box-shadow:var(--shadow-sm);
   transition:all 0.3s ease;
   cursor:pointer;
   position:relative;
   overflow:hidden;
+}
+.card::after{
+  content:"";
+  position:absolute;
+  top:-20%;
+  right:-10%;
+  width:120px;
+  height:120px;
+  background:radial-gradient(circle at center,rgba(15,76,58,0.12),rgba(15,76,58,0));
+  pointer-events:none;
 }
 .content-panel{
   background-color:#f0efeb;

@@ -64,9 +64,12 @@ body{
 }
 .site-nav a,
 .site-nav button{
+  display:flex;
+  align-items:center;
+  gap:4px;
   color:#f5f3f0;
   text-decoration:none;
-  padding:8px 12px;
+  padding:10px 12px;
   border-radius:6px;
   background:transparent;
   border:none;

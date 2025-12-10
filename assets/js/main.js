@@ -1,5 +1,5 @@
-document.addEventListener('DOMContentLoaded', function(){\n  document.body.classList.add('js-enabled');
-  // main.js — handles dropdown and navigation interactivity
+document.addEventListener('DOMContentLoaded', function(){
+  // main.js handles dropdown and navigation interactivity
   
   // active link highlight
   (function highlight(){
@@ -122,50 +122,4 @@ document.addEventListener('DOMContentLoaded', function(){\n  document.body.class
       // local link — no-op
     }
   });
-
-  // Scroll progress bar
-  (function(){
-    var progress = document.createElement("div");
-    progress.className = "scroll-progress";
-    progress.innerHTML = '<div class="scroll-progress__bar" aria-hidden="true"></div>';
-    document.body.prepend(progress);
-    var bar = progress.querySelector('.scroll-progress__bar');
-    if(!bar) return;
-    var ticking = false;
-    var update = function(){
-      var doc = document.documentElement;
-      var scrollTop = window.scrollY || doc.scrollTop || 0;
-      var docHeight = doc.scrollHeight - window.innerHeight;
-      var percent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-      bar.style.width = percent + '%';
-      ticking = false;
-    };
-    var onScroll = function(){
-      if(!ticking){
-        window.requestAnimationFrame(update);
-        ticking = true;
-      }
-    };
-    window.addEventListener('scroll', onScroll, {passive:true});
-    update();
-  })();
-
-  // Reveal on scroll
-  (function(){
-    var revealEls = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
-    if(!revealEls.length || !('IntersectionObserver' in window)) return;
-
-    var observer = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if(entry.isIntersecting){
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, {threshold:0.15, rootMargin:'0px 0px -10% 0px'});
-
-    revealEls.forEach(function(el){ observer.observe(el); });
-  })();
 });
-
-

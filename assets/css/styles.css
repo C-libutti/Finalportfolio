@@ -33,7 +33,7 @@ body{
   padding:0;
   line-height:1.6;
 }
-html{scroll-behavior:smooth}
+html{scroll-behavior:auto}
 .container{max-width:1080px;margin:0 auto;padding:var(--space-3)}
 
 /* Header & Navigation */
@@ -356,22 +356,15 @@ html{scroll-behavior:smooth}
   display:none;
 }
 
-/* Reveal base */
+/* Reveal base (disabled to restore static view) */
 .reveal{
-  opacity:0;
-  transform:translateY(12px);
-  transition:opacity 0.5s ease, transform 0.5s ease;
-  transition-delay:var(--delay, 0ms);
-  will-change:opacity, transform;
-}
-.reveal.is-visible{
-  opacity:1;
-  transform:translateY(0);
-}
-body:not(.js-enabled) .reveal{
   opacity:1;
   transform:none;
   transition:none;
+}
+.reveal.is-visible{
+  opacity:1;
+  transform:none;
 }
 
 /* Page Hero / Section Header */
@@ -429,23 +422,9 @@ body:not(.js-enabled) .reveal{
   box-shadow:var(--shadow-sm);
 }
 
-/* Scroll progress bar */
-.scroll-progress{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:3px;
-  background:transparent;
-  z-index:1200;
-  pointer-events:none;
-}
-.scroll-progress__bar{
-  height:100%;
-  width:0%;
-  background:linear-gradient(90deg,var(--accent), var(--accent-soft));
-  transition:width 0.15s ease-out;
-}
+/* Scroll progress bar (disabled) */
+.scroll-progress{display:none;}
+.scroll-progress__bar{display:none;}
 
 /* Project Navigation */
 .project-nav{

@@ -619,6 +619,9 @@ body{
   border-radius:var(--radius);
   box-shadow:var(--shadow-sm);
 }
+.project2-hero h1{
+  color:var(--accent);
+}
 
 .project2-content {
   margin:32px 0;
@@ -639,20 +642,20 @@ body{
 
 .project2-content h2,
 .project2-hero h2 {
-  color:var(--text-primary);
+  color:var(--accent);
   margin-top:0;
   font-size:1.5rem;
 }
 
 .project2-content h3,
 .project2-hero h3 {
-  color:var(--text-primary);
+  color:var(--accent);
   margin-top:24px;
   font-weight:600;
 }
 
 .project2-content h4 {
-  color:var(--text-primary);
+  color:var(--accent);
   margin-top:20px;
   font-weight:600;
   font-size:1rem;
@@ -874,7 +877,7 @@ figcaption {
 
 .photography-image figcaption{
   font-size:0.95rem;
-  color:var(--text-muted);
+  color:#fff;
   font-style:italic;
   margin-top:12px;
   text-align:center;
@@ -1335,7 +1338,7 @@ figcaption {
 /* Memoir pages */
 .memoir-article h1,
 .memoir-article h2,
-.memoir-article h3{color:var(--text-primary);}
+.memoir-article h3{color:var(--accent);}
 .memoir-article p,
 .memoir-article li{color:var(--text-muted);}
 

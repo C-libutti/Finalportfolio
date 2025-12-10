@@ -107,7 +107,7 @@ body{
 
 /* Dropdown Menu - FORCE HIDDEN BY DEFAULT */
 .dropdown-menu{
-  display:none;
+  display:none !important;
   position:absolute;
   top:100%;
   left:0;
@@ -119,11 +119,15 @@ body{
   min-width:220px;
   z-index:999;
   overflow:hidden;
+  visibility:visible;
+  opacity:1;
 }
 
 /* Dropdown Menu - SHOW ONLY WHEN OPEN */
 .has-dropdown.is-open .dropdown-menu{
-  display:block;
+  display:block !important;
+  visibility:visible;
+  opacity:1;
 }
 
 /* Dropdown Items */
@@ -434,6 +438,215 @@ body{
 
 .resources-list a:hover {
   text-decoration:underline;
+}
+
+/* Project 2 Multi-Page Styles */
+.project2-article {
+  max-width:900px;
+}
+
+.project2-nav {
+  margin:24px 0;
+  padding:16px;
+  background-color:#e8e5e0;
+  border:1px solid var(--border-color);
+  border-radius:var(--radius);
+}
+
+.subnav {
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.subnav ul {
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  align-items:center;
+}
+
+.subnav li {
+  margin:0;
+  padding:0;
+}
+
+.subnav strong {
+  color:var(--accent-green-dark);
+  font-weight:600;
+}
+
+.subnav a {
+  color:var(--accent-green);
+  text-decoration:none;
+  font-weight:500;
+  transition:all 0.2s ease;
+}
+
+.subnav a:hover {
+  color:var(--accent-green-dark);
+  text-decoration:underline;
+}
+
+.project2-hero {
+  margin:32px 0;
+  padding:24px;
+  background-color:var(--card-bg);
+  border:1px solid var(--border-color);
+  border-radius:var(--radius);
+}
+
+.project2-content {
+  margin:32px 0;
+  padding:24px;
+  background-color:var(--card-bg);
+  border:1px solid var(--border-color);
+  border-radius:var(--radius);
+}
+
+.project2-reflection {
+  margin:32px 0;
+  padding:24px;
+  background-color:#f5f3f0;
+  border:1px solid var(--border-color);
+  border-radius:var(--radius);
+}
+
+.project2-content h2,
+.project2-hero h2 {
+  color:var(--accent-green-dark);
+  margin-top:0;
+  font-size:1.5rem;
+}
+
+.project2-content h3,
+.project2-hero h3 {
+  color:var(--accent-green-dark);
+  margin-top:24px;
+  font-weight:600;
+}
+
+.project2-content h4 {
+  color:var(--accent-green);
+  margin-top:20px;
+  font-weight:600;
+  font-size:1rem;
+}
+
+.photo-placeholder {
+  margin:20px 0;
+  padding:0;
+}
+
+.placeholder-image {
+  background-color:#e8e5e0;
+  border:2px dashed var(--border-color);
+  border-radius:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:200px;
+  margin:20px 0;
+}
+
+.placeholder-image p {
+  color:var(--text-muted);
+  margin:0;
+  font-style:italic;
+}
+
+figcaption {
+  text-align:center;
+  color:var(--text-muted);
+  font-size:0.9rem;
+  font-style:italic;
+  margin-top:8px;
+}
+
+/* Term Definition List */
+.terms-list {
+  margin:16px 0;
+}
+
+.terms-list dt {
+  margin-top:16px;
+  margin-bottom:8px;
+  color:var(--accent-green-dark);
+  font-weight:600;
+}
+
+.terms-list dt:first-child {
+  margin-top:0;
+}
+
+.terms-list dd {
+  margin:0 0 12px 20px;
+  color:var(--text-muted);
+  line-height:1.6;
+}
+
+/* Source Lists */
+.sources-list,
+.resources-list {
+  list-style:none;
+  padding:0;
+  margin:16px 0;
+}
+
+.sources-list li,
+.resources-list li {
+  margin:16px 0;
+  padding:16px;
+  background-color:#f5f3f0;
+  border-left:4px solid var(--accent-green);
+  border-radius:4px;
+}
+
+.sources-list li:first-child,
+.resources-list li:first-child {
+  margin-top:0;
+}
+
+.sources-list strong,
+.resources-list strong {
+  color:var(--accent-green-dark);
+  display:block;
+  margin-bottom:8px;
+  font-size:0.95rem;
+}
+
+.sources-list p,
+.resources-list p {
+  margin:8px 0 0 0;
+  color:var(--text-muted);
+  font-size:0.9rem;
+  line-height:1.6;
+}
+
+.resources-list a {
+  color:var(--accent-green);
+  text-decoration:none;
+  font-weight:500;
+}
+
+.resources-list a:hover {
+  text-decoration:underline;
+}
+
+/* Bottom Navigation */
+.project2-bottom-nav {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin:32px 0;
+  justify-content:center;
+}
+
+.project2-bottom-nav .btn {
+  margin-top:0;
 }
 
 /* Responsive Design */

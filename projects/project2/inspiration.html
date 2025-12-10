@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Finding Inspiration — Project 2: Photography</title>
+  <link id="site-css" rel="stylesheet" href="">
+  <script>
+    (function(){
+      var path = location.pathname.replace(/\\/g,'/');
+      var prefix = '../../';
+      document.getElementById('site-css').href = prefix + 'assets/css/styles.css';
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" data-href="index.html">My English Portfolio</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="site-nav">
+        <ul>
+          <li><a data-href="index.html">Home</a></li>
+          <li><a data-href="about.html">About Me</a></li>
+          <li class="has-dropdown">
+            <button class="drop-btn" aria-haspopup="menu" aria-expanded="false">Projects ▾</button>
+            <ul class="dropdown-menu">
+              <li><a data-href="project1.html">Project 1 (Memoir)</a></li>
+              <li><a data-href="project2.html">Project 2 (Photography)</a></li>
+            </ul>
+          </li>
+          <li><a data-href="slos.html">SLOs</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container narrow">
+    <article class="project2-article">
+      <h1>Finding Inspiration in the Photography Community</h1>
+
+      <section class="project2-nav">
+        <nav class="subnav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="language.html">Language of the Community</a></li>
+            <li><strong>Finding Inspiration</strong></li>
+          </ul>
+        </nav>
+      </section>
+
+      <section class="project2-content">
+        <p>Photographers find inspiration from many sources, including online tutorials, professional galleries, and everyday moments. Articles from academic journals, technical guides, and social media platforms teach technical skills and show how photography connects to history and creativity. Online photography communities also play a major role by offering quick tips and visual examples that help photographers of all levels grow.</p>
+
+        <h2>Key Sources of Inspiration</h2>
+
+        <h3>Academic & Technical Resources</h3>
+        
+        <ul class="sources-list">
+          <li>
+            <strong>Berger, Martin A. "Photography, History, and the Historian." American Art, 2015.</strong>
+            <p>This article explains how photography has shaped visual storytelling throughout history. It highlights how photographers document real moments and influence the public's perception of events, showing how important photographers are to cultural memory.</p>
+          </li>
+
+          <li>
+            <strong>Bodurka, Gosia. "Macro Photography for Beginners." PSA Journal, 2015.</strong>
+            <p>This source gives practical advice on macro photography, including how lighting, angles, and technical settings affect small subjects. It shows how photographers share skills and techniques to help others grow.</p>
+          </li>
+
+          <li>
+            <strong>@gshotpictures. "Photography for Beginners — The Fundamentals of Photography." Instagram Reel, 2025.</strong>
+            <p>This reel explains basic photography concepts like aperture and ISO through quick, easy visuals. It shows how social media plays a huge role in teaching and inspiring photographers today.</p>
+          </li>
+        </ul>
+
+        <h3>Professional & Community Resources</h3>
+        
+        <ul class="resources-list">
+          <li>
+            <strong>National Geographic Photography</strong>
+            <p><a href="https://www.nationalgeographic.com" target="_blank" rel="noopener noreferrer">nationalgeographic.com</a></p>
+            <p>National Geographic showcases powerful nature and wildlife photography. Their images highlight storytelling, patience, and technical skill, serving as a major source of inspiration for photographers worldwide.</p>
+          </li>
+
+          <li>
+            <strong>Digital Photography School</strong>
+            <p><a href="https://digital-photography-school.com" target="_blank" rel="noopener noreferrer">digital-photography-school.com</a></p>
+            <p>This site provides tutorials on everything from exposure to editing. It's popular in the photography community because it offers step-by-step guides that help beginners improve quickly.</p>
+          </li>
+
+          <li>
+            <strong>PetaPixel</strong>
+            <p><a href="https://petapixel.com" target="_blank" rel="noopener noreferrer">petapixel.com</a></p>
+            <p>PetaPixel shares photography news, gear reviews, and creative ideas. Many photographers use it to stay updated on trends and learn new techniques.</p>
+          </li>
+        </ul>
+
+        <p style="margin-top:24px;padding:16px;background-color:#e8e5e0;border-left:4px solid var(--accent-green);border-radius:4px;color:var(--text-primary);">
+          <strong>The links below represent some of the most influential spaces in photography today,</strong> providing tutorials, news, and powerful visual storytelling that inspire photographers of all levels.
+        </p>
+      </section>
+
+      <nav class="project2-bottom-nav">
+        <a href="language.html" class="btn">← Language of the Community</a>
+        <a href="index.html" class="btn">Back to Home →</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; [Year] Your Name. <span class="muted">Final Portfolio — ENGL 1110</span></p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var prefix = '../../';
+
+      document.querySelectorAll('[data-href]').forEach(function(el){
+        var href = el.getAttribute('data-href');
+        if(href){ el.setAttribute('href', prefix + href); }
+      });
+
+      var s = document.createElement('script');
+      s.src = prefix + 'assets/js/main.js';
+      document.body.appendChild(s);
+    })();
+  </script>
+</body>
+</html>

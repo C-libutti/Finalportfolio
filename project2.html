@@ -41,7 +41,15 @@
   <main class="container narrow">
     <article>
       <h1>Project 2 — Photography Discourse Community</h1>
+      <p style="text-align:center;margin:24px 0;padding:24px;background-color:var(--card-bg);border:1px solid var(--border-color);border-radius:var(--radius);">
+        <a href="projects/project2/index.html" class="btn">→ Go to Project 2 Page</a>
+      </p>
+    </article>
+  </main>
 
+  <!-- OLD CONTENT BELOW - KEPT FOR REFERENCE -->
+  <div style="display:none;">
+    <article>
       <section class="project-intro">
         <h2>Photography: Capturing Life Through Light</h2>
         <p>I became involved in the photography community when I borrowed my friend's camera during high school. What started as a way to document everyday life quickly became a passion for storytelling through images. The first time I adjusted the settings for myself on manual mode, I realized how much control I had over how a moment could feel. Photography felt like a voice without words, allowing me to express emotion through lighting, texture, and composition.</p>
@@ -129,13 +137,8 @@
           </li>
         </ul>
       </section>
-
-      <section class="project-reflection">
-        <h2>Analysis & Reflection</h2>
-        <p class="placeholder">[Add your personal analysis of the photography discourse community, how these concepts connect to your experience, and what you've learned about visual rhetoric and community engagement]</p>
-      </section>
     </article>
-  </main>
+  </div>
 
   <footer class="site-footer">
     <div class="container">
@@ -147,8 +150,6 @@
     (function(){
       var path = location.pathname.replace(/\\/g,'/');
       var prefix = '';
-      if(path.indexOf('/projects/photography/')!==-1) prefix='../../';
-      else if(path.indexOf('/projects/')!==-1) prefix='../';
 
       document.querySelectorAll('[data-href]').forEach(function(el){
         var href = el.getAttribute('data-href');

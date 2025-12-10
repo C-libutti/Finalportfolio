@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Language of the Community — Project 2: Photography</title>
+  <link id="site-css" rel="stylesheet" href="">
+  <script>
+    (function(){
+      var path = location.pathname.replace(/\\/g,'/');
+      var prefix = '../../';
+      document.getElementById('site-css').href = prefix + 'assets/css/styles.css';
+    })();
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" data-href="index.html">My English Portfolio</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="site-nav">
+        <ul>
+          <li><a data-href="index.html">Home</a></li>
+          <li><a data-href="about.html">About Me</a></li>
+          <li class="has-dropdown">
+            <button class="drop-btn" aria-haspopup="menu" aria-expanded="false">Projects ▾</button>
+            <ul class="dropdown-menu">
+              <li><a data-href="project1.html">Project 1 (Memoir)</a></li>
+              <li><a data-href="project2.html">Project 2 (Photography)</a></li>
+            </ul>
+          </li>
+          <li><a data-href="slos.html">SLOs</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container narrow">
+    <article class="project2-article">
+      <h1>Language of the Photography Community</h1>
+
+      <section class="project2-nav">
+        <nav class="subnav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><strong>Language of the Community</strong></li>
+            <li><a href="inspiration.html">Finding Inspiration</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <section class="project2-content">
+        <p>Photography has its own vocabulary—terms that photographers use to describe techniques, tools, and concepts. Understanding this language is essential for engaging with the community and improving your craft.</p>
+
+        <!-- TODO: Add image from original Google Site -->
+        <figure class="photo-placeholder">
+          <div class="placeholder-image" style="background-color:#e8e5e0;padding:80px 20px;text-align:center;border-radius:8px;margin:20px 0;">
+            <p style="color:#6b7a77;margin:0;">[Photo: Photography terminology visual guide]</p>
+          </div>
+          <figcaption>Understanding the language of photography helps photographers communicate about their craft.</figcaption>
+        </figure>
+
+        <h2>Key Photography Terms</h2>
+
+        <dl class="terms-list">
+          <dt><strong>Aperture</strong></dt>
+          <dd>Aperture controls how much light enters the lens. A low f-stop (like f/1.8) creates a blurry background, while a high f-stop keeps the whole image sharp.</dd>
+
+          <dt><strong>ISO</strong></dt>
+          <dd>ISO measures the camera's sensitivity to light. Low ISO keeps images clean, while high ISO brightens dark scenes but can add grain.</dd>
+
+          <dt><strong>Shutter Speed</strong></dt>
+          <dd>Shutter speed determines how long the camera captures light. Fast shutter speeds freeze motion; slow speeds create motion blur or light trails.</dd>
+
+          <dt><strong>Rule of Thirds</strong></dt>
+          <dd>A composition guideline that divides the frame into a grid. Placing the subject along the lines or intersections creates a more balanced, appealing photo.</dd>
+
+          <dt><strong>Post-Processing</strong></dt>
+          <dd>Editing photos after taking them. Photographers adjust lighting, color, sharpness, and more to improve or stylize an image.</dd>
+        </dl>
+
+        <p style="margin-top:24px;padding:16px;background-color:#e8e5e0;border-left:4px solid var(--accent-green);border-radius:4px;color:var(--text-primary);">
+          <strong>Knowing these terms</strong> allows photographers to have meaningful conversations about their work, seek specific advice, and contribute meaningfully to the discourse community.
+        </p>
+      </section>
+
+      <nav class="project2-bottom-nav">
+        <a href="index.html" class="btn">← Back to Home</a>
+        <a href="inspiration.html" class="btn">Finding Inspiration →</a>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; [Year] Your Name. <span class="muted">Final Portfolio — ENGL 1110</span></p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var prefix = '../../';
+
+      document.querySelectorAll('[data-href]').forEach(function(el){
+        var href = el.getAttribute('data-href');
+        if(href){ el.setAttribute('href', prefix + href); }
+      });
+
+      var s = document.createElement('script');
+      s.src = prefix + 'assets/js/main.js';
+      document.body.appendChild(s);
+    })();
+  </script>
+</body>
+</html>

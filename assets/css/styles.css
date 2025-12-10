@@ -975,6 +975,109 @@ figcaption {
   box-shadow:var(--shadow-md);
 }
 
+/* Memoir Article Styles */
+.memoir-article {
+  max-width:900px;
+  margin:0 auto;
+  padding:20px;
+}
+
+.memoir-article h1 {
+  font-size:2.4rem;
+  font-weight:700;
+  color:var(--text-primary);
+  margin:0 0 32px 0;
+  padding-bottom:16px;
+  border-bottom:3px solid var(--accent-green);
+  line-height:1.2;
+}
+
+.memoir-article h2 {
+  font-size:1.8rem;
+  font-weight:700;
+  color:var(--text-primary);
+  margin:40px 0 24px 0;
+  padding-bottom:12px;
+  border-bottom:2px solid var(--accent-green-light);
+}
+
+.memoir-article h3 {
+  font-size:1.3rem;
+  font-weight:700;
+  color:var(--accent-green);
+  margin:24px 0 12px 0;
+}
+
+.memoir-section {
+  margin:24px 0;
+  line-height:1.8;
+}
+
+.memoir-section p {
+  font-size:1rem;
+  color:var(--text-primary);
+  margin:16px 0;
+  text-align:justify;
+}
+
+.memoir-image {
+  margin:24px 0;
+  padding:0;
+  text-align:center;
+  background-color:var(--bg-secondary);
+  padding:20px;
+  border-radius:var(--radius);
+  border:1px solid var(--border-color);
+}
+
+.memoir-image img {
+  max-width:100%;
+  height:auto;
+  display:block;
+  margin:0 auto;
+  border-radius:6px;
+  box-shadow:var(--shadow-sm);
+}
+
+.memoir-image figcaption {
+  font-size:0.95rem;
+  color:var(--text-muted);
+  font-style:italic;
+  margin-top:12px;
+}
+
+.resource-links {
+  list-style:none;
+  padding:0;
+  margin:16px 0;
+}
+
+.resource-links li {
+  margin:12px 0;
+  padding:12px;
+  background-color:var(--card-bg);
+  border-left:4px solid var(--accent-green);
+  border-radius:4px;
+  transition:all 0.2s ease;
+}
+
+.resource-links li:hover {
+  background-color:#f0ebe5;
+  transform:translateX(4px);
+}
+
+.resource-links a {
+  color:var(--accent-green);
+  text-decoration:none;
+  font-weight:600;
+  font-size:1.05rem;
+}
+
+.resource-links a:hover {
+  text-decoration:underline;
+  color:var(--accent-green-dark);
+}
+
 /* Responsive Design */
 @media (max-width:768px){
   .site-nav{display:none}

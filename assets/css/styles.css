@@ -198,6 +198,14 @@ body{
   transition:all 0.3s ease;
   cursor:pointer;
 }
+.content-panel{
+  background-color:var(--card-bg);
+  padding:32px;
+  border-radius:var(--radius);
+  border:1px solid var(--border-color);
+  box-shadow:var(--shadow-sm);
+  margin-top:24px;
+}
 .card:hover{
   transform:translateY(-4px);
   box-shadow:var(--shadow-md);

@@ -187,6 +187,13 @@ body{
   overflow:hidden;
   box-shadow:var(--shadow-lg);
 }
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,rgba(0,0,0,0) 55%,rgba(15,76,58,0.28) 70%,rgba(15,76,58,0.35) 100%);
+  pointer-events:none;
+}
 .hero::after{
   content:"";
   position:absolute;
@@ -218,13 +225,18 @@ body{
 }
 .hero-signature{
   position:absolute;
-  right:10%;
+  left:58%;
+  right:8%;
   top:50%;
   transform:translateY(-50%);
-  font-family:"Segoe Script","Brush Script MT",cursive;
-  font-size:4.6rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:"Pacifico","Segoe Script","Brush Script MT",cursive;
+  font-size:5rem;
   color:var(--accent);
   opacity:0.9;
+  pointer-events:none;
 }
 .hero .lede{
   font-size:1.12rem;

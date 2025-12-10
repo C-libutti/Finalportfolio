@@ -215,7 +215,9 @@ body{
 }
 
 /* Buttons */
-.btn{
+.btn,
+.btn:link,
+.btn:visited{
   display:inline-block;
   padding:12px 24px;
   margin-top:12px;
@@ -229,9 +231,6 @@ body{
   cursor:pointer;
   transition:all 0.2s ease;
   box-shadow:0 2px 6px rgba(45,74,52,0.2);
-}
-.btn:visited{
-  color:#f5f3f0;
 }
 .btn:hover{
   background-color:var(--accent-green-light);

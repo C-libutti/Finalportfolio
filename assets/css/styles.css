@@ -219,11 +219,12 @@ body{
 .hero-signature{
   position:absolute;
   right:8%;
-  bottom:16%;
+  top:50%;
+  transform:translateY(-20%);
   font-family:"Segoe Script","Brush Script MT",cursive;
-  font-size:3rem;
+  font-size:4rem;
   color:var(--accent);
-  opacity:0.95;
+  opacity:0.9;
 }
 .hero .lede{
   font-size:1.12rem;

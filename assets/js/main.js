@@ -40,18 +40,40 @@
     });
   }
 
-  // dropdown buttons
+  // dropdown buttons — toggle current and close others; manage aria-expanded
   document.querySelectorAll('.drop-btn').forEach(function(btn){
+    btn.setAttribute('aria-expanded','false');
     btn.addEventListener('click', function(e){
+      e.stopPropagation();
       var parent = btn.parentElement;
-      parent.classList.toggle('drop-open');
+      var isOpen = parent.classList.contains('drop-open');
+
+      // close all first
+      document.querySelectorAll('.has-dropdown').forEach(function(el){
+        el.classList.remove('drop-open');
+        var b = el.querySelector('.drop-btn');
+        if(b) b.setAttribute('aria-expanded','false');
+      });
+
+      // toggle this one
+      if(!isOpen){
+        parent.classList.add('drop-open');
+        btn.setAttribute('aria-expanded','true');
+      } else {
+        parent.classList.remove('drop-open');
+        btn.setAttribute('aria-expanded','false');
+      }
     });
   });
 
-  // close dropdowns on outside click (desktop)
+  // close dropdowns on outside click (desktop/mobile)
   document.addEventListener('click', function(e){
     if(e.target.closest('.has-dropdown')) return;
-    document.querySelectorAll('.has-dropdown').forEach(function(el){ el.classList.remove('drop-open'); });
+    document.querySelectorAll('.has-dropdown').forEach(function(el){
+      el.classList.remove('drop-open');
+      var b = el.querySelector('.drop-btn');
+      if(b) b.setAttribute('aria-expanded','false');
+    });
   });
 
   // enhance buttons that were anchors with no default href

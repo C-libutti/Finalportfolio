@@ -1,32 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap');
 
 :root{
-  --bg:#fbfbf9;
+  --bg:#faf8f6;
   --card:#ffffff;
-  --muted:#6b6b6b;
-  --accent:#2b4367;
-  --accent-2:#7a5c4f;
-  --radius:10px;
+  --muted:#6d6d6d;
+  --accent:#16324a;
+  --accent-2:#8a5f50;
+  --radius:12px;
 }
 *{box-sizing:border-box}
 body{font-family:'Inter',system-ui,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:#222;margin:0;line-height:1.55}
 .container{max-width:1000px;margin:0 auto;padding:24px}
-.header-inner{display:flex;align-items:center;justify-content:space-between}
-.brand{font-family:'Playfair Display',serif;font-size:1.125rem;color:var(--accent);text-decoration:none}
-.site-header{background:rgba(255,255,255,0.9);border-bottom:1px solid #e6e6e6;position:sticky;top:0;z-index:50}
-.site-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:12px;align-items:center}
-.site-nav a, .site-nav button{color:#223; text-decoration:none;padding:8px 6px;border-radius:6px;background:transparent;border:0;font:inherit;cursor:pointer}
-.site-nav a:hover, .site-nav button:hover{background:#f1f1f1}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--accent);text-decoration:none}
+.site-header{background:rgba(255,255,255,0.95);border-bottom:1px solid rgba(0,0,0,0.04);position:sticky;top:0;z-index:50}
+.site-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:14px;align-items:center}
+.site-nav a, .site-nav button{color:var(--accent); text-decoration:none;padding:8px 8px;border-radius:8px;background:transparent;border:0;font:600 0.95rem/1 Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;cursor:pointer}
+.site-nav a:hover, .site-nav button:hover{background:rgba(20,30,40,0.04)}
 .nav-toggle{display:none;background:transparent;border:0;font-size:1.3rem;padding:8px}
 .has-dropdown{position:relative}
-.dropdown{position:absolute;left:0;top:36px;background:var(--card);box-shadow:0 6px 22px rgba(20,20,20,0.08);border-radius:8px;padding:8px;display:none;min-width:220px}
+.dropdown{position:absolute;left:0;top:44px;background:var(--card);box-shadow:0 10px 30px rgba(20,20,20,0.08);border-radius:12px;padding:8px;display:none;min-width:220px}
 .dropdown li{padding:0}
-.dropdown a{display:block;padding:8px 12px;color:#123}
+.dropdown a{display:block;padding:10px 14px;color:var(--accent)}
 .drop-btn{display:flex;align-items:center;gap:6px}
 .drop-open > .dropdown{display:block}
 
-.hero{padding:48px 0}
-.hero h1{font-family:'Playfair Display',serif;font-size:2.25rem;margin:0 0 8px;color:var(--accent)}
+/* show dropdown on hover for pointer devices */
+@media (hover: hover) and (min-width:880px){
+  .has-dropdown:hover > .dropdown{display:block}
+}
+
+.dropdown .divider{height:1px;margin:6px 0;background:linear-gradient(90deg,rgba(0,0,0,0.04),transparent);list-style:none}
+
+.hero{padding:56px 0}
+.hero h1{font-family:'Playfair Display',serif;font-size:2.5rem;margin:0 0 8px;color:var(--accent)}
 .lede{font-size:1.05rem;color:var(--muted);margin:0 0 12px}
 
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:18px}

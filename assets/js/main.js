@@ -40,37 +40,45 @@
     });
   }
 
-  // dropdown buttons — toggle current and close others; manage aria-expanded
+  // dropdown button handler — use .is-open class (not .drop-open)
   document.querySelectorAll('.drop-btn').forEach(function(btn){
+    btn.setAttribute('role','button');
     btn.setAttribute('aria-expanded','false');
+    btn.setAttribute('aria-haspopup','menu');
+    
+    var dropdown = btn.nextElementSibling;
+    if(dropdown && dropdown.classList.contains('dropdown')){
+      btn.setAttribute('aria-controls', dropdown.id || 'dropdown-' + Math.random().toString(36).substr(2,9));
+    }
+
     btn.addEventListener('click', function(e){
       e.stopPropagation();
       var parent = btn.parentElement;
-      var isOpen = parent.classList.contains('drop-open');
+      var isOpen = parent.classList.contains('is-open');
 
-      // close all first
+      // close all other dropdowns
       document.querySelectorAll('.has-dropdown').forEach(function(el){
-        el.classList.remove('drop-open');
+        el.classList.remove('is-open');
         var b = el.querySelector('.drop-btn');
         if(b) b.setAttribute('aria-expanded','false');
       });
 
-      // toggle this one
+      // toggle this dropdown
       if(!isOpen){
-        parent.classList.add('drop-open');
+        parent.classList.add('is-open');
         btn.setAttribute('aria-expanded','true');
-      } else {
-        parent.classList.remove('drop-open');
-        btn.setAttribute('aria-expanded','false');
+        btn.focus();
       }
     });
   });
 
-  // close dropdowns on outside click (desktop/mobile)
+  // close all dropdowns on outside click
   document.addEventListener('click', function(e){
+    // if click is inside a dropdown, don't close
     if(e.target.closest('.has-dropdown')) return;
+    
     document.querySelectorAll('.has-dropdown').forEach(function(el){
-      el.classList.remove('drop-open');
+      el.classList.remove('is-open');
       var b = el.querySelector('.drop-btn');
       if(b) b.setAttribute('aria-expanded','false');
     });
@@ -78,9 +86,9 @@
 
   // close dropdowns on Escape key
   document.addEventListener('keydown', function(e){
-    if(e.key === 'Escape'){
+    if(e.key === 'Escape' || e.key === 'Esc'){
       document.querySelectorAll('.has-dropdown').forEach(function(el){
-        el.classList.remove('drop-open');
+        el.classList.remove('is-open');
         var b = el.querySelector('.drop-btn');
         if(b) b.setAttribute('aria-expanded','false');
       });
@@ -89,14 +97,35 @@
 
   // close dropdown when a menu item is clicked
   document.querySelectorAll('.dropdown a').forEach(function(link){
+    link.setAttribute('role','menuitem');
     link.addEventListener('click', function(){
       var dropdown = link.closest('.has-dropdown');
       if(dropdown){
-        dropdown.classList.remove('drop-open');
+        dropdown.classList.remove('is-open');
         var btn = dropdown.querySelector('.drop-btn');
         if(btn) btn.setAttribute('aria-expanded','false');
       }
     });
+  });
+
+  // keyboard navigation in dropdowns (up/down arrows, Enter, etc.)
+  document.addEventListener('keydown', function(e){
+    var dropdown = e.target.closest('.dropdown.is-open');
+    if(!dropdown) return;
+
+    var items = dropdown.querySelectorAll('a');
+    var current = document.activeElement;
+    var currentIndex = Array.from(items).indexOf(current);
+
+    if(e.key === 'ArrowDown'){
+      e.preventDefault();
+      var next = items[currentIndex + 1];
+      if(next) next.focus();
+    } else if(e.key === 'ArrowUp'){
+      e.preventDefault();
+      var prev = items[currentIndex - 1];
+      if(prev) prev.focus();
+    }
   });
 
   // enhance buttons that were anchors with no default href

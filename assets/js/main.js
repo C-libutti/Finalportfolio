@@ -47,11 +47,12 @@
     btn.setAttribute('aria-haspopup','menu');
     
     var dropdown = btn.nextElementSibling;
-    if(dropdown && dropdown.classList.contains('dropdown')){
+    if(dropdown && dropdown.classList.contains('dropdown-menu')){
       btn.setAttribute('aria-controls', dropdown.id || 'dropdown-' + Math.random().toString(36).substr(2,9));
     }
 
     btn.addEventListener('click', function(e){
+      e.preventDefault();
       e.stopPropagation();
       var parent = btn.parentElement;
       var isOpen = parent.classList.contains('is-open');
@@ -96,7 +97,7 @@
   });
 
   // close dropdown when a menu item is clicked
-  document.querySelectorAll('.dropdown a').forEach(function(link){
+  document.querySelectorAll('.dropdown-menu a').forEach(function(link){
     link.setAttribute('role','menuitem');
     link.addEventListener('click', function(){
       var dropdown = link.closest('.has-dropdown');
@@ -110,10 +111,13 @@
 
   // keyboard navigation in dropdowns (up/down arrows, Enter, etc.)
   document.addEventListener('keydown', function(e){
-    var dropdown = e.target.closest('.dropdown.is-open');
+    var dropdown = e.target.closest('.has-dropdown.is-open');
     if(!dropdown) return;
 
-    var items = dropdown.querySelectorAll('a');
+    var menu = dropdown.querySelector('.dropdown-menu');
+    if(!menu) return;
+
+    var items = menu.querySelectorAll('a');
     var current = document.activeElement;
     var currentIndex = Array.from(items).indexOf(current);
 

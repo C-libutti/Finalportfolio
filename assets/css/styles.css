@@ -294,6 +294,148 @@ body{
   margin-bottom:24px;
 }
 
+/* Project Page Sections */
+.project-intro,
+.project-section,
+.project-reflection {
+  margin:32px 0;
+  padding:20px;
+  background-color:var(--card-bg);
+  border:1px solid var(--border-color);
+  border-radius:var(--radius);
+}
+
+.project-intro h3,
+.project-section h3,
+.project-section h4 {
+  color:var(--accent-green-dark);
+  margin-top:20px;
+  margin-bottom:12px;
+  font-weight:600;
+}
+
+.project-intro h3:first-of-type {
+  margin-top:12px;
+}
+
+.project-section h2 {
+  color:var(--accent-green-dark);
+  margin-top:0;
+  margin-bottom:16px;
+  font-size:1.5rem;
+  font-weight:700;
+}
+
+.project-nav {
+  margin:24px 0;
+  padding:16px;
+  background-color:#e8e5e0;
+  border:1px solid var(--border-color);
+  border-radius:var(--radius);
+}
+
+.project-nav h2 {
+  margin-top:0;
+  font-size:1.2rem;
+  color:var(--accent-green-dark);
+}
+
+.project-nav nav {
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.project-nav a {
+  display:inline-block;
+  padding:10px 18px;
+  background-color:var(--card-bg);
+  border:1px solid var(--border-color);
+  color:var(--accent-green-dark);
+  text-decoration:none;
+  border-radius:6px;
+  font-weight:500;
+  transition:all 0.2s ease;
+}
+
+.project-nav a:hover {
+  background-color:var(--accent-green);
+  color:#f5f3f0;
+  border-color:var(--accent-green);
+  transform:translateY(-2px);
+  box-shadow:var(--shadow-sm);
+}
+
+/* Definition List Styling */
+.terms-list {
+  margin:16px 0;
+}
+
+.terms-list dt {
+  margin-top:16px;
+  margin-bottom:8px;
+  color:var(--accent-green-dark);
+  font-weight:600;
+}
+
+.terms-list dt:first-child {
+  margin-top:0;
+}
+
+.terms-list dd {
+  margin:0 0 12px 20px;
+  color:var(--text-muted);
+  line-height:1.6;
+}
+
+/* Sources & Resources Lists */
+.sources-list,
+.resources-list {
+  list-style:none;
+  padding:0;
+  margin:16px 0;
+}
+
+.sources-list li,
+.resources-list li {
+  margin:20px 0;
+  padding:16px;
+  background-color:#f5f3f0;
+  border-left:4px solid var(--accent-green);
+  border-radius:4px;
+}
+
+.sources-list li:first-child,
+.resources-list li:first-child {
+  margin-top:0;
+}
+
+.sources-list strong,
+.resources-list strong {
+  color:var(--accent-green-dark);
+  display:block;
+  margin-bottom:8px;
+  font-size:0.95rem;
+}
+
+.sources-list p,
+.resources-list p {
+  margin:8px 0 0 0;
+  color:var(--text-muted);
+  font-size:0.9rem;
+  line-height:1.6;
+}
+
+.resources-list a {
+  color:var(--accent-green);
+  text-decoration:none;
+  font-weight:500;
+}
+
+.resources-list a:hover {
+  text-decoration:underline;
+}
+
 /* Responsive Design */
 @media (max-width:768px){
   .site-nav{display:none}

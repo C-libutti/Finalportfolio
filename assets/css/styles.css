@@ -673,16 +673,20 @@ figcaption {
   list-style:none;
   margin:0;
   padding:0;
-  display:flex;
-  flex-wrap:wrap;
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  grid-auto-rows:1fr;
   gap:0;
 }
 
 .photography-nav li{
-  flex:1;
-  min-width:150px;
+  min-width:140px;
   padding:0;
   display:flex;
+}
+
+.photography-nav li:last-child{
+  grid-column:1/-1;
 }
 
 .photography-nav li a,
@@ -708,7 +712,8 @@ figcaption {
   background-color:transparent;
 }
 
-.photography-nav a:hover{
+.photography-nav a:hover,
+.photography-nav li:last-child a:hover{
   background-color:#f0ebe5;
   color:var(--accent-green);
 }

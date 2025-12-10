@@ -1,17 +1,17 @@
-/* CSS Variables - Sage Green & Ivory Palette */
+/* CSS Variables - Green & Ivory Palette */
 :root{
-  --bg-primary:#f5f3f0;
-  --bg-secondary:#fffaf5;
-  --text-primary:#2d3c3a;
-  --text-muted:#6b7a77;
-  --accent-sage:#5a7f6c;
-  --accent-sage-light:#7a9f8c;
-  --accent-sage-dark:#3f5845;
-  --border-color:#ddd9d0;
-  --card-bg:#ffffff;
+  --bg-primary:#3f5845;
+  --bg-secondary:#f5f3f0;
+  --text-primary:#1a1a1a;
+  --text-muted:#4a4a4a;
+  --accent-green:#2d4a34;
+  --accent-green-light:#5a7f6c;
+  --accent-green-dark:#1f3726;
+  --card-bg:#f9f8f6;
+  --border-color:#e0ddd8;
   --radius:10px;
-  --shadow-sm:0 2px 8px rgba(0,0,0,0.06);
-  --shadow-md:0 8px 16px rgba(0,0,0,0.08);
+  --shadow-sm:0 2px 8px rgba(0,0,0,0.08);
+  --shadow-md:0 8px 16px rgba(0,0,0,0.12);
 }
 /* Reset & Base Styles */
 *{box-sizing:border-box}
@@ -28,8 +28,8 @@ body{
 
 /* Header & Navigation */
 .site-header{
-  background-color:var(--bg-secondary);
-  border-bottom:1px solid var(--border-color);
+  background-color:var(--bg-primary);
+  border-bottom:1px solid rgba(255,255,255,0.1);
   position:sticky;
   top:0;
   z-index:100;
@@ -47,11 +47,11 @@ body{
 .brand{
   font-size:1.5rem;
   font-weight:700;
-  color:var(--accent-sage-dark);
+  color:#f5f3f0;
   text-decoration:none;
   letter-spacing:-0.5px;
 }
-.brand:hover{color:var(--accent-sage)}
+.brand:hover{color:#fff}
 
 /* Navigation Menu */
 .site-nav ul{
@@ -64,7 +64,7 @@ body{
 }
 .site-nav a,
 .site-nav button{
-  color:var(--text-primary);
+  color:#f5f3f0;
   text-decoration:none;
   padding:8px 12px;
   border-radius:6px;
@@ -77,8 +77,8 @@ body{
 }
 .site-nav a:hover,
 .site-nav button:hover{
-  background-color:rgba(90,127,108,0.1);
-  color:var(--accent-sage);
+  background-color:rgba(255,255,255,0.15);
+  color:#fff;
 }
 
 /* Dropdown Container */
@@ -94,15 +94,15 @@ body{
   padding:8px 12px;
   background:transparent;
   border:none;
-  color:var(--text-primary);
+  color:#f5f3f0;
   font-size:0.95rem;
   font-weight:500;
   cursor:pointer;
   transition:all 0.2s ease;
 }
 .drop-btn:hover{
-  background-color:rgba(90,127,108,0.1);
-  color:var(--accent-sage);
+  background-color:rgba(255,255,255,0.15);
+  color:#fff;
 }
 
 /* Dropdown Menu - FORCE HIDDEN BY DEFAULT */
@@ -140,8 +140,8 @@ body{
   transition:all 0.15s ease;
 }
 .dropdown-menu a:hover{
-  background-color:rgba(90,127,108,0.08);
-  color:var(--accent-sage);
+  background-color:#e8e5e0;
+  color:var(--accent-green);
   padding-left:20px;
 }
 
@@ -151,7 +151,7 @@ body{
   background:transparent;
   border:none;
   font-size:1.5rem;
-  color:var(--accent-sage);
+  color:#f5f3f0;
   cursor:pointer;
   padding:4px;
 }
@@ -159,21 +159,21 @@ body{
 /* Hero Section */
 .hero{
   padding:60px 20px;
-  background:linear-gradient(135deg,rgba(90,127,108,0.08) 0%,rgba(245,243,240,1) 100%);
+  background:linear-gradient(135deg,rgba(47,74,52,0.9) 0%,rgba(63,88,69,0.85) 100%);
   border-radius:12px;
   margin:24px 0;
 }
 .hero h1{
   font-size:2.6rem;
   font-weight:700;
-  color:var(--accent-sage-dark);
+  color:#fff;
   margin:0 0 12px 0;
   line-height:1.2;
   letter-spacing:-1px;
 }
 .lede{
   font-size:1.1rem;
-  color:var(--text-muted);
+  color:#e0ddd8;
   margin:0 0 16px 0;
   max-width:600px;
 }
@@ -197,13 +197,13 @@ body{
 .card:hover{
   transform:translateY(-4px);
   box-shadow:var(--shadow-md);
-  border-color:var(--accent-sage);
+  border-color:var(--accent-green-light);
 }
 .card h3{
   margin-top:0;
   font-size:1.3rem;
   font-weight:700;
-  color:var(--accent-sage-dark);
+  color:var(--accent-green-dark);
 }
 .card p{
   color:var(--text-muted);
@@ -215,8 +215,8 @@ body{
   display:inline-block;
   padding:12px 24px;
   margin-top:12px;
-  background-color:var(--accent-sage);
-  color:#ffffff;
+  background-color:var(--accent-green);
+  color:#f5f3f0;
   text-decoration:none;
   border:none;
   border-radius:6px;
@@ -224,12 +224,12 @@ body{
   font-weight:600;
   cursor:pointer;
   transition:all 0.2s ease;
-  box-shadow:0 2px 6px rgba(90,127,108,0.2);
+  box-shadow:0 2px 6px rgba(45,74,52,0.2);
 }
 .btn:hover{
-  background-color:var(--accent-sage-light);
+  background-color:var(--accent-green-light);
   transform:translateY(-2px);
-  box-shadow:0 4px 10px rgba(90,127,108,0.3);
+  box-shadow:0 4px 10px rgba(45,74,52,0.3);
 }
 .btn:active{
   transform:translateY(0);
@@ -239,7 +239,7 @@ body{
 .narrow{max-width:720px}
 .placeholder{
   min-height:120px;
-  background-color:rgba(90,127,108,0.04);
+  background-color:#e8e5e0;
   border:1px solid var(--border-color);
   padding:20px;
   border-radius:var(--radius);
@@ -249,8 +249,8 @@ body{
 .muted{color:var(--text-muted)}
 .active-link{
   font-weight:600;
-  color:var(--accent-sage);
-  background-color:rgba(90,127,108,0.08);
+  color:var(--accent-green);
+  background-color:rgba(45,74,52,0.1);
   border-radius:6px;
 }
 
@@ -273,22 +273,22 @@ body{
 }
 .project-nav a{
   padding:8px 14px;
-  background-color:rgba(90,127,108,0.06);
+  background-color:#e8e5e0;
   border:1px solid var(--border-color);
   border-radius:6px;
-  color:var(--accent-sage);
+  color:var(--accent-green-dark);
   text-decoration:none;
   font-weight:500;
   transition:all 0.15s ease;
 }
 .project-nav a:hover{
-  background-color:rgba(90,127,108,0.12);
-  border-color:var(--accent-sage);
+  background-color:#ddd9d0;
+  border-color:var(--accent-green);
 }
 
 .project-hero{
   padding:24px;
-  background-color:rgba(90,127,108,0.03);
+  background-color:#e8e5e0;
   border:1px solid var(--border-color);
   border-radius:var(--radius);
   margin-bottom:24px;
@@ -305,8 +305,8 @@ body{
     top:100%;
     left:0;
     right:0;
-    background-color:var(--bg-secondary);
-    border-bottom:1px solid var(--border-color);
+    background-color:var(--accent-green-dark);
+    border-bottom:1px solid rgba(255,255,255,0.1);
     padding:12px 0;
   }
   .site-nav.mobile-open ul{
@@ -318,6 +318,7 @@ body{
     display:block;
     padding:12px 20px;
     text-align:left;
+    color:#f5f3f0;
   }
   
   .dropdown-menu{
@@ -326,7 +327,7 @@ body{
     box-shadow:none;
     margin:0;
     padding:8px 0 8px 24px;
-    background-color:rgba(90,127,108,0.04);
+    background-color:rgba(0,0,0,0.15);
   }
   
   .hero{

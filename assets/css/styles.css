@@ -1332,10 +1332,12 @@ figcaption {
 /* Icon buttons */
 .drop-btn::after{content:"▼";}
 
-/* Memoir pages on dark background */
+/* Memoir pages */
 .memoir-article h1,
 .memoir-article h2,
-.memoir-article h3{color:#f5f5f5;}
+.memoir-article h3{color:var(--text-primary);}
 .memoir-article p,
-.memoir-article li{color:#dfe3e6;}
+.memoir-article li{color:var(--text-muted);}
+
+
 

@@ -1,4 +1,4 @@
-(function(){
+document.addEventListener('DOMContentLoaded', function(){
   // main.js — handles nav link rewriting and interactivity
   function computePrefix(){
     var path = location.pathname.replace(/\\/g,'/');
